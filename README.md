@@ -28,4 +28,5 @@ ninja
 The final executable file called mkxp is in the build directory.
 
 ## Troubleshooting
-If your raspberry keeps crashing during the last step when running `ninja`, try reducing the number of concurrent jobs by using the `-j` flag. On my zero 2 w it only builds using `ninja -j3` even though the pi 2 has 4 cores
+If your raspberry keeps crashing during the last step when running `ninja`, try reducing the number of concurrent jobs by using the `-j` flag. On my zero 2 w it only builds using `ninja -j3` even though the pi 2 has 4 cores.
+If the game runs realy slow try enabling the gl driver through raspi-config > Advanced Options > GL Driver
