@@ -193,7 +193,7 @@ $(DOWNLOADS)/sdl2/Makefile: $(DOWNLOADS)/sdl2/configure
 	$(CONFIGURE) --enable-static=true --enable-shared=false $(SDL_FLAGS)
 
 $(DOWNLOADS)/sdl2/configure: $(DOWNLOADS)/sdl2/autogen.sh
-        cd $(DOWNLOADS)/sdl2; ./autogen.sh
+	cd $(DOWNLOADS)/sdl2; ./autogen.sh
 
 $(DOWNLOADS)/sdl2/autogen.sh:
 	$(CLONE) $(GITHUB)/mkxp-z/SDL $(DOWNLOADS)/sdl2 -b mkxp-z
