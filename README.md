@@ -6,7 +6,7 @@ This is a fork of mkxp-z intended to be built on raspberry pi making it possible
 
 Install tools to build dependencies
 ```
-sudo apt install git build-essential cmake meson autoconf automake libtool pkg-config ruby bison zlib1g-dev libbz2-dev xorg-dev libgles2-mesa-dev libasound2-dev libpulse-dev
+sudo apt install git build-essential cmake meson autoconf automake libtool pkg-config ruby bison zlib1g-dev libbz2-dev xorg-dev libgles2-mesa-dev libasound2-dev libpulse-dev libraspberrypi-dev
 ```
 
 Clone and build dependencies
