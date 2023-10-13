@@ -7,10 +7,10 @@ OPENAL_FLAGS := -DALSOFT_CPUEXT_NEON=no ${OPENAL_FLAGS}
 OPENSSL_FLAGS := linux-armv4 ${OPENSSL_FLAGS}
 RUBY_FLAGS := ${RUBY_FLAGS}
 
-BUILD_PREFIX := ${PWD}/build-$(ARCH)
+BUILD_PREFIX := ${PWD}/build
 LIBDIR := $(BUILD_PREFIX)/lib
 INCLUDEDIR := $(BUILD_PREFIX)/include
-DOWNLOADS := ${PWD}/downloads/$(ARCH)
+DOWNLOADS := ${PWD}/downloads
 NPROC := $(shell nproc)
 CFLAGS := -I$(INCLUDEDIR) -flax-vector-conversions -O3
 LDFLAGS := -L$(LIBDIR)
@@ -186,7 +186,7 @@ sdl2: init_dirs $(LIBDIR)/libSDL2.a
 
 $(LIBDIR)/libSDL2.a: $(DOWNLOADS)/sdl2/Makefile
 	cd $(DOWNLOADS)/sdl2; \
-	make -j$(NPROC); make install;
+	make -j$(NPROC); make install
 
 $(DOWNLOADS)/sdl2/Makefile: $(DOWNLOADS)/sdl2/configure
 	cd $(DOWNLOADS)/sdl2;
