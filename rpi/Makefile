@@ -189,7 +189,7 @@ $(LIBDIR)/libSDL2.a: $(DOWNLOADS)/sdl2/Makefile
 	make -j$(NPROC); make install
 
 $(DOWNLOADS)/sdl2/Makefile: $(DOWNLOADS)/sdl2/configure
-	cd $(DOWNLOADS)/sdl2;
+	cd $(DOWNLOADS)/sdl2; \
 	$(CONFIGURE) --enable-static=true --enable-shared=false $(SDL_FLAGS)
 
 $(DOWNLOADS)/sdl2/configure: $(DOWNLOADS)/sdl2/autogen.sh
